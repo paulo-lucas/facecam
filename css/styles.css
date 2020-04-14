@@ -1,0 +1,161 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: #4b4b54;
+    font-family: Roboto, sans-serif;
+}
+
+.container{
+    width: 1080px;
+    margin: 5vh auto;
+    
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.fixed-area, .user-info, .user-images, .chat-box{
+    background-color: #fff;
+}
+
+.fixed-area{
+    width: calc(50% - 2px);
+    height: 90vh;
+    border-right: solid 2px #4b4b54;
+}
+
+.user-space{
+    width: 50%;
+    height: 100%;
+}
+
+.user-info, .user-images{
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: solid 2px #4b4b54;
+}
+
+.user-info h2{
+    font-size: 14pt;
+}
+
+.user-info #player{
+    position: relative;
+    width: auto;
+    height: 140px;
+}
+
+.user-images #image{
+    display: none;
+}
+
+.user-images #button-photo{
+    width: 30%;
+    margin: 0 30%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #4b4b54;
+    color: white;
+}
+
+.user-images #button-photo:focus{
+    outline: none;
+}
+
+.chat-box{
+    width: 100%;
+    height: calc(90vh - 324px);
+}
+
+#messages{
+    width: 100%;
+    height: 85%;
+    padding: 5px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    overflow-y: auto;
+}
+
+.message{
+    border-radius: 5px;
+    max-width: 80%;
+    padding: 10px;
+    margin: 5px 5px;
+    display: inline-block;
+}
+
+.green-message{
+    background-color: lightgreen;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.grey-message{
+    background-color: lightgray;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.blue-message{
+    background-color: lightskyblue;
+    align-self: center;
+    text-align: center;
+}
+
+.red-message{
+    background-color: lightcoral;
+    color: white;
+    align-self: center;
+    text-align: center;
+
+}
+
+#send{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#send #messageTXT{
+    padding: 5px;
+    width: 80%;
+    border-radius: 20px;
+    border: solid 2px #777;
+}
+
+#send #button-send{
+    height: 36px;
+    width: 36px;
+    border: none;
+    background-color: #4b4b54;
+    border-radius: 100%;
+    transition: all 0.1s linear;
+}
+
+#send #button-send:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 5px #999;
+}
+
+#button-send:focus, #messageTXT:focus{
+    outline: none;
+}
+
+.alerts{
+    background-color: rgb(235, 170, 170);
+    width: 100%;
+    height: 20vh;
+    border-top: solid 2px #4b4b54;
+}
+
+.alerts h2{
+    font-size: 14pt;
+    margin: 10px 0 5px 10px;
+}

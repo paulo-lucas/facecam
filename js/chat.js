@@ -3,7 +3,9 @@
 const websocket = new WebSocket("ws://projectapi/sockets/messages.php");
 const messages = document.querySelector("#messages");
 const send = document.querySelector("#send");
+*/
 
+//função principal de exibição
 function showMessage(messageHTML, messageType){
     const div = document.createElement("div");
     div.classList.add("message");
@@ -11,7 +13,7 @@ function showMessage(messageHTML, messageType){
     div.innerHTML = messageHTML;
     messages.appendChild(div);
 }
-
+/*
 websocket.onopen = function(event){
     showMessage("Você ingressou na conversa", "blue-message");
 }
@@ -45,3 +47,15 @@ send.addEventListener("submit", function(event){
 });
 */
 
+//para testes
+const send = document.querySelector("#send");
+send.addEventListener("submit", function(event){
+    event.preventDefault();
+    const message = send.messageTXT.value;
+    if(message == ""){
+        return;
+    }else{
+        showMessage(send.messageTXT.value, "green-message");
+        send.messageTXT.value = "";
+    }
+});

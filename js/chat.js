@@ -1,10 +1,12 @@
 // inserir url do server
 /*
 const websocket = new WebSocket("ws://projectapi/sockets/messages.php");
-const messages = document.querySelector("#messages");
+
 const send = document.querySelector("#send");
 */
-
+const messages = document.querySelector("#messages");
+const messagesContainer = document.querySelector("#messages-container");
+messagesContainer.scrollTo(0, messagesContainer.scrollHeight);
 //função principal de exibição
 function showMessage(messageHTML, messageType){
     const div = document.createElement("div");
@@ -12,6 +14,9 @@ function showMessage(messageHTML, messageType){
     div.classList.add(messageType);
     div.innerHTML = messageHTML;
     messages.appendChild(div);
+
+    console.log(messages.height)
+    messagesContainer.scrollTo(0, messagesContainer.scrollHeight);
 }
 /*
 websocket.onopen = function(event){

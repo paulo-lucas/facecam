@@ -12,24 +12,34 @@
             </div>
             <div class="user-space">
                 <div class="user-info">
-                    <h2>ID do Aluno: 123456</h2>
+                    <h2>ID: 123456</h2>
                     <video id="player" autoplay></video>
                 </div>
 
                 <div class="user-images">
-                    <button id="button-photo">Capturar imagem</button>
+                    <button id="button-photo"><img src="ico/camera-24.png" alt="Capturar imagem"></button>
                     <canvas id="image" width=64 height=48></canvas>
                 </div>
 
                 <div class="chat-box">
-                    <div id="messages">
-                        <div class='message blue-message'>Você ingressou na conversa</div>
-                        <div class='message grey-message'>Mensagem de outro usuário</div>
-                        <div class='message green-message'>Mensagem do usuário local</div>
-                        <div class='message red-message'>Mensagem de erro</div>
+                    <div id="messages-container">
+                        <div id="messages">
+                            <div class='message blue-message'>Você ingressou na conversa</div>
+
+                            <div class='message grey-message'>Lorem ipsum dolor sit amet</div>
+                            <div class='message grey-message'>consectetur adipisicing elit.</div>
+                            
+                            <div class='message green-message'>Quaerat unde necessitatibus hic mollitia?</div>
+                            <div class='message green-message'>Ipsa vero voluptatum </div>
+                            <div class='message green-message'> repellendus ex totam asperiores</div>
+
+                            <div class='message grey-message'>ab quas veniam itaque atque</div>
+
+                            <div class='message green-message'>dignissimos labore quisquam neque</div>
+                        </div>
                     </div>
                     <form id="send">
-                        <input type="text" name="messageTXT" id="messageTXT" placeholder="Digite a mensagem...">
+                        <input type="text" class="w3-light-grey" name="messageTXT" id="messageTXT" placeholder="Digite a mensagem...">
                         <button type="submit" id="button-send"><img src="ico/up-arrow-24.png" alt="Enviar"></button>
                     </form>
                 </div>

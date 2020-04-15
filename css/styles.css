@@ -1,7 +1,7 @@
 html, body{
     margin: 0;
     padding: 0;
-    background-color: #4b4b54;
+    background-color: #4c70ff;
     font-family: Roboto, sans-serif;
 }
 
@@ -11,16 +11,17 @@ html, body{
     
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
 }
 
-.fixed-area, .user-info, .user-images, .chat-box{
-    background-color: #fff;
+.fixed-area, .user-info, .user-images, .chat-box, .alerts{
+    background-color: #89c6ff;
+    border-radius: 20px;
 }
 
 .fixed-area{
-    width: calc(50% - 2px);
+    width: 48%;
     height: 90vh;
-    border-right: solid 2px #4b4b54;
 }
 
 .user-space{
@@ -28,18 +29,20 @@ html, body{
     height: 100%;
 }
 
-.user-info, .user-images{
+.user-info{
     width: 100%;
-    height: 160px;
+    height: 150px;
+    margin-bottom: 20px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    border-bottom: solid 2px #4b4b54;
 }
 
 .user-info h2{
     font-size: 14pt;
+    align-self: flex-start;
+    color: #0000bc;
 }
 
 .user-info #player{
@@ -52,13 +55,25 @@ html, body{
     display: none;
 }
 
+.user-images{
+    
+    padding: 5px;
+    width: calc(100% - 10px);
+    height: 140px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .user-images #button-photo{
-    width: 30%;
-    margin: 0 30%;
-    padding: 5px 10px;
-    border-radius: 10px;
-    background-color: #4b4b54;
-    color: white;
+    height: 40px;
+    width: 60px;
+    border: none;
+    background-color: #4c70ff;
+    border-radius: 20px;
+    align-self: flex-start;
 }
 
 .user-images #button-photo:focus{
@@ -67,56 +82,59 @@ html, body{
 
 .chat-box{
     width: 100%;
-    height: calc(90vh - 324px);
+    height: calc(90vh - 340px);
 }
 
-#messages{
+#messages-container{
     width: 100%;
     height: 85%;
-    padding: 5px 0;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-end;
     overflow-y: auto;
 }
 
+#messages{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+}
+
 .message{
-    border-radius: 5px;
+    color: white;
+    border-radius: 10px;
     max-width: 80%;
     padding: 10px;
-    margin: 5px 5px;
+    margin: 5px 15px;
     display: inline-block;
 }
 
 .green-message{
-    background-color: lightgreen;
+    background-color: #BADA55;
     align-self: flex-end;
     text-align: right;
+    border-radius: 15px 3px 15px 15px;
 }
 
 .grey-message{
-    background-color: lightgray;
+    background-color: #c3c3cc;
     align-self: flex-start;
     text-align: left;
+    border-radius: 15px 15px 15px 3px;
 }
 
 .blue-message{
-    background-color: lightskyblue;
+    background-color: #4c95ff;
     align-self: center;
     text-align: center;
 }
 
 .red-message{
     background-color: lightcoral;
-    color: white;
     align-self: center;
     text-align: center;
-
 }
 
 #send{
     width: 100%;
-    height: 10%;
+    height: 15%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
@@ -125,23 +143,25 @@ html, body{
 
 #send #messageTXT{
     padding: 5px;
-    width: 80%;
+    width: 70%;
     border-radius: 20px;
-    border: solid 2px #777;
+    border: solid 2px #4c70ff;
+    background-color: #bce4ff;
 }
 
 #send #button-send{
     height: 36px;
     width: 36px;
     border: none;
-    background-color: #4b4b54;
+    background-color: #4c70ff;
     border-radius: 100%;
-    transition: all 0.1s linear;
+    
 }
 
-#send #button-send:hover{
+#send #button-send:hover, .user-images #button-photo:hover{
+    transition: 0.1s linear;
     transform: translateY(-5px);
-    box-shadow: 0 5px #999;
+    box-shadow: 0 5px #4b4b54;
 }
 
 #button-send:focus, #messageTXT:focus{
@@ -149,13 +169,13 @@ html, body{
 }
 
 .alerts{
-    background-color: rgb(235, 170, 170);
     width: 100%;
     height: 20vh;
-    border-top: solid 2px #4b4b54;
+    margin-top: 20px;
 }
 
 .alerts h2{
     font-size: 14pt;
     margin: 10px 0 5px 10px;
+    color: #0000bc
 }

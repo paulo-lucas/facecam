@@ -7,7 +7,7 @@ function showStream(stream){
 navigator.mediaDevices.getUserMedia({video: true})
     .then(showStream)
     .catch(function(err){
-        //alert("Sem acesso à câmera.");
+        alert("Sem acesso à câmera.");
     });
 
 
